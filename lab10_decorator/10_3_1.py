@@ -68,8 +68,11 @@ class PreWordDecorator(Decorator):
 
 
 if __name__ == "__main__":
-    res = PrintableString('')
-    res = PostComaDecorator(res)
-    res = PostWordDecorator(res, ' Wold')
-    res = PreWordDecorator(res, 'Hello')
-    print(res.operation())
+    # res = PrintableString('')
+    # res = PostComaDecorator(res)
+    # res = PostWordDecorator(res, ' ')
+    # res = PostWordDecorator(res, 'Wold')
+    # res = PreWordDecorator(res, 'Hello')
+    # print(res.operation())
+
+    print(PreWordDecorator(PostWordDecorator(PostComaDecorator(PrintableString('')), ' Wold'), 'Hello').operation())

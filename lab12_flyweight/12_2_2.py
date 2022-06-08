@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from enum import Enum
 from random import randint, choice
 from typing import Dict
